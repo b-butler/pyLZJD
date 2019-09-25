@@ -351,7 +351,7 @@ cdef int compare(const_void *va, const_void *vb):
     
 @cython.boundscheck(False) # turn off bounds-checking for entire function
 @cython.wraparound(False)  # turn off negative index wrapping for entire function
-def intersection_size(int[::1] A, int[::1] B):
+def intersection_size(const int[::1] A, const int[::1] B):
     cdef unsigned int pos_a = 0
     cdef unsigned int pos_b = 0
     cdef unsigned int a_len = A.shape[0]
